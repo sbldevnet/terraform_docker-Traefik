@@ -1,7 +1,7 @@
 # Docker Traefik
 
 resource "docker_image" "traefik" {
-  name         = "traefik:latest"
+  name         = "traefik:${var.traefik_version}"
   keep_locally = true
 }
 

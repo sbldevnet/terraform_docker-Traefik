@@ -1,5 +1,11 @@
 # Docker Traefik Variables file
 
+variable "traefik_version" {
+  type        = string
+  default     = "latest"
+  description = "Docker Image Tag"
+}
+
 variable "traefik_conf" {
   type        = string
   default     = "/opt/traefik/traefik.yml"
@@ -14,7 +20,7 @@ variable "web_ui_port" {
 
 variable "dashboard_router" {
   type        = bool
-  default     = true
+  default     = false
   description = "Enable dashboard through traefik"
 }
 
